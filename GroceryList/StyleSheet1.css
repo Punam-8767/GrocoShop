@@ -1,0 +1,738 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+*                        /* Select all elements within that portion of DOM  */
+{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;  /* Allows us to include padding & border in an elements total width & height */
+  box-sizing: border-box;          /* As above */
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;        /* 1st letter of every word becomes capital */
+  -webkit-transition: .2s linear;    /* Sets the length of time a transition animation should take to complete */
+  transition: .2s linear;
+}
+
+html 
+{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+section 
+{
+  padding: 3rem 9%;
+}
+
+.heading 
+{
+  background: url(https://static.vecteezy.com/system/resources/thumbnails/010/930/988/small/shopping-online-on-phone-with-podium-paper-art-modern-background-gifts-box-vector.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-top: 12rem;
+  padding-bottom: 8rem;
+}
+
+.heading h1 
+{
+  color: #222;
+  font-size: 4rem;
+}
+
+
+.heading p 
+{
+  padding-top: 1rem;
+  font-size: 2rem;
+  color: #666;
+}
+
+.heading p a 
+{
+  color: #222;
+  padding-right: .5rem;
+}
+
+.heading p a:hover 
+{
+  color: #bac34e;
+}
+
+.title 
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  padding: 1.2rem 0;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  color: #222;
+}
+
+.title span 
+{
+  color: #bac34e;
+  padding-left: .7rem;
+}
+
+.title a 
+{
+  margin-left: auto;
+  color: #666;
+  font-size: 1.5rem;
+}
+
+.title a:hover 
+{
+  color: #bac34e;
+}
+
+.btn 
+{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: .8rem 3rem;
+  background: #bac34e;
+  color: #fff;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.btn:hover 
+{
+  background: #222;
+}
+
+.header 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 9%;
+}
+
+.header .logo 
+{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #222;
+}
+
+.header .logo i 
+{
+  color: orange;
+  padding-right: .5rem;
+}
+
+.header .navbar a 
+{
+    font-family:Castellar;
+    font-size: 1.4rem;
+    color: black;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover 
+{
+  color: orange;
+}
+
+.header .icons div 
+{
+  font-size: 2.5rem;
+  margin-left: 1.7rem;
+  cursor: pointer;
+  color: black;
+}
+
+.header .icons div:hover 
+{
+  color: orange;
+}
+
+.header .search-form 
+{
+  position: absolute;
+  top: -115%;
+  right: 2rem;
+  width: 50rem;
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.header .search-form.active 
+{
+  top: 115%;
+}
+
+.header .search-form input 
+{
+  height: 100%;
+  width: 100%;
+  padding: 0 1.2rem;
+  font-size: 1.6rem;
+  color: #222;
+  text-transform: none;
+}
+
+.header .search-form label 
+{
+  font-size: 2.5rem;
+  margin-right: 1.7rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.header .search-form label:hover 
+{
+  color: orange;
+}
+
+.header .shopping-cart 
+{
+  position: absolute;
+  top: 115%;
+  right: -105%;
+  background: #fff;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  width: 35rem;
+  padding: 2rem;
+}
+
+.header .shopping-cart.active 
+{
+  right: 2rem;
+  -webkit-transition: .4s linear;
+  transition: .4s linear;
+}
+
+.header .shopping-cart .box 
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.header .shopping-cart .btn
+{
+  background-color: orange;
+}
+
+.header .login-form .btn
+{
+  background-color: orange;
+}
+
+.header .shopping-cart .box .fa-times 
+{
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 2rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.header .shopping-cart .box .fa-times:hover 
+{
+  color: orange;
+}
+
+.header .shopping-cart .box img 
+{
+  height: 10rem;
+}
+
+.header .shopping-cart .box .content h3 
+{
+  font-size: 1.7rem;
+  padding-bottom: .5rem;
+  color: #222;
+}
+
+.header .shopping-cart .box .content span 
+{
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.header .shopping-cart .box .content span.multiply 
+{
+  margin: 0 .5rem;
+}
+
+.header .shopping-cart .total 
+{
+  color: #666;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.header .shopping-cart .total span 
+{
+  color: #222;
+}
+
+.header .shopping-cart .btn 
+{
+  text-align: center;
+  width: 100%;
+}
+
+.header .login-form 
+{
+  position: absolute;
+  top: 115%;
+  right: -105%;
+  background: #fff;
+  border-radius: .5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  width: 35rem;
+  padding: 2rem;
+}
+
+.header .login-form.active 
+{
+  right: 2rem;
+  -webkit-transition: .4s linear;
+  transition: .4s linear;
+}
+
+.header .login-form h3 
+{
+  color: #222;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: .7rem;
+}
+
+.header .login-form .box 
+{
+  margin: .7rem 0;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.2rem;
+  font-size: 1.5rem;
+  color: #222;
+  text-transform: none;
+  width: 100%;
+}
+
+.header .login-form .remember 
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+  margin: .7rem 0;
+}
+
+.header .login-form .remember label 
+{
+  font-size: 1.5rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.header .login-form .btn 
+{
+  margin: 1rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.header .login-form p 
+{
+  color: #666;
+  padding-top: .7rem;
+  font-size: 1.4rem;
+}
+
+.header .login-form p a 
+{
+  color: #bac34e;
+}
+
+.header .login-form p a:hover 
+{
+  text-decoration: underline;
+}
+
+#menu-btn 
+{
+  display: none;
+}
+
+@-webkit-keyframes fadeLeft 
+{
+  0% 
+  {
+    -webkit-transform: translateX(-5rem);
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeLeft 
+{
+  0% 
+  {
+    -webkit-transform: translateX(-5rem);
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeUp 
+{
+  0% 
+  {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+.home 
+{
+  padding-top: 14rem;
+  background: url(https://media.istockphoto.com/id/1247567791/vector/shopping-online-with-realistic-modern-smartphone-virtual-realistic-geometry-gifts-shopping.jpg?s=612x612&w=0&k=20&c=vjZm-IU7z3K_qN4luKcFMje4YXlSsiy10ILusXYCoz4=) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.home .slides-container .slide 
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+ align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  display: none;
+}
+
+.home .slides-container .slide.active 
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .slides-container .slide .content 
+{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem;
+  -webkit-animation: fadeLeft .4s linear .4s backwards;
+  animation: fadeLeft .4s linear .4s backwards;
+}
+
+.home .slides-container .slide.active a
+{
+  background-color: orange;
+  color: white;
+}
+
+.home .slides-container .slide a
+{
+  background-color: orange;
+  color: white;
+}
+
+.banner-container .banner a
+{
+  background-color: orange;
+  color: white;
+}
+
+
+
+.home .slides-container .slide .content span 
+{
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+}
+
+.home .slides-container .slide .content h3 
+{
+  font-size: 6rem;
+  color: #222;
+  padding: .5rem 0;
+}
+
+.home .slides-container .slide .image 
+{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 40rem;
+  flex: 1 1 40rem;
+  margin: 3rem 0;
+}
+
+.home .slides-container .slide .image img 
+{
+  width: 100%;
+  -webkit-animation: fadeUp .4s linear;
+  animation: fadeUp .4s linear;
+}
+
+.home #next-slide,
+.home #prev-slide 
+{
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: #fff;
+  font-size: 3rem;
+  color: #222;
+  cursor: pointer;
+}
+
+.home #next-slide:hover,
+.home #prev-slide:hover 
+{
+  background: orange;
+  color: #fff;
+}
+
+.home #prev-slide 
+{
+  left: 2rem;
+}
+
+.home #next-slide 
+{
+  right: 2rem;
+}
+
+
+
+
+/* Footer Section */
+
+
+.footer 
+{
+  background: black;
+}
+
+.footer .box-container 
+{
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 
+{
+  font-size: 2.2rem;
+  color: white;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box p 
+{
+  font-size: 1.5rem;
+  color: white;
+  padding-bottom: .5rem;
+}
+
+.footer .box-container .btn
+{
+  background-color: orange;
+}
+
+.footer .box-container .box a 
+{
+  font-size: 1.4rem;
+  color: white;
+  padding: 1rem 0;
+  display: block;
+}
+
+.footer .box-container .box a:hover {
+  color: orange;
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
+
+.footer .box-container .box a i {
+  padding-right: .5rem;
+  color: orange;
+}
+
+.footer .box-container .box form input[type="email"] 
+{
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  color: #222;
+  margin: 1rem 0;
+  text-transform: none;
+}
+
+.footer .box-container .box .payment 
+{
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.credit 
+{
+  text-align: center;
+  background: gray;
+  color: white;
+  font-size: 2rem;
+}
+
+/* ------------------- */
+
+
+
+
+body {
+  background-image: url('http://marhabaworld.com/wp-content/uploads/2021/12/grocery-shopping.jpg'); 
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: courier, monospace;
+  
+}
+
+form {
+  color: black;
+  font-size: 22px;
+}
+
+input[type="text"]{
+  background-color : white;
+  text-align: left;
+}
+
+#addNeed {
+  background-color : white;
+  color: black;
+  text-align: center;
+}
+
+#addHave {
+  background-color :white;
+  color: black;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+  text-align: left;
+}
+
+h2 {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 42px;
+  letter-spacing: -2px;
+  text-align: left;
+}
+.list {
+  color: #555;
+  font-size: 22px;
+  padding: 0 !important;
+  width: 500px;
+  border: 1px solid #dedede;
+}
+.list li {
+  list-style: none;
+  background-color : #f8f8f8;
+  border-bottom: 1px dotted #ccc;
+  text-indent: 25px;
+  height: auto;
+  padding: 10px;
+  text-transform: capitalize;
+  color: black;
+}
+li a {
+  float: right;
+  text-decoration: none;
+  color: red;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), /* Webkit-based browsers */
+       (min--moz-device-pixel-ratio: 2),    /* Older Firefox browsers (prior to Firefox 16) */
+       (min-resolution: 2dppx),             /* The standard way */
+       (min-resolution: 192dpi)             /* dppx fallback */
+{
+	body {
+		background-image: url('http://marhabaworld.com/wp-content/uploads/2021/');
+	}
+}

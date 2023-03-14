@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Shopping List</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="StyleSheet1.css">
+
+
+    <!--  http://localhost:58753/Home.html  -->
+
+    <!-- file:///C:/Users/ymane/OneDrive/Documents/TimesPro/Projects/E-ShopJS/E-ShopJS/HtmlPage1.html#home -->
+
+
+    
+
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 0;
+        }
+        
+        html {
+          box-sizing: border-box;
+        }
+        
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+        
+        .column {
+          float: left;
+          width: 33.3%;
+          margin-bottom: 16px;
+          padding: 0 8px;
+        }
+        
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          margin: 8px;
+        }
+        
+        .about-section {
+          padding: 50px;
+          text-align: center;
+          background-color: #474e5d;
+          color: white;
+        }
+        
+        .container {
+          padding: 0 16px;
+        }
+        
+        .container::after, .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        .title {
+          color: grey;
+        }
+        
+        .button {
+          border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+          background-color: #000;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+        }
+        
+        .button:hover {
+          background-color: #555;
+        }
+        
+        @media screen and (max-width: 650px) {
+          .column {
+            width: 100%;
+            display: block;
+          }
+        }
+        </style>
+
+
+
+</head>
+
+
+
+<body>
+    
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <div style="font-size:20px; font-family:Algerian; ">
+            <span>
+                <img src="https://thumbs.dreamstime.com/z/secure-shopping-gold-medal-57460209.jpg" style="padding-top:20px; height:50px;" />
+            </span>
+            Groco-Shop
+        </div>
+
+
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+            <div id="login-btn" class="fas fa-user"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label> 
+        </form>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="https://www.kiranamarket.com/pub/media/wysiwyg/Grocery-Items-Cat.jpg" alt="">
+                <div class="content">
+                    <h3>Groco item</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">$18.99</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="https://m.media-amazon.com/images/I/711i8CJgS1L._SX522_.jpg" alt="">
+                <div class="content">
+                    <h3>Groco item</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">$18.99</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-times"></i>
+                <img src="https://www.kiranamarket.com/pub/media/wysiwyg/Grocery-Items-Cat.jpg" alt="">
+                <div class="content">
+                    <h3>Groco item</h3>
+                    <span class="quantity">1</span>
+                    <span class="multiply">x</span>
+                    <span class="price">$18.99</span>
+                </div>
+            </div>
+            <h3 class="total"> total : <span>56.97</span> </h3>
+            <a href="#" class="btn">checkout cart</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>login form</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <div class="remember">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="login now" class="btn">
+            <p>forget password? <a href="#">click here</a></p>
+            <p>don't have an account? <a href="#">create one</a></p>
+        </form>
+
+    </header>
+    <!-- Header section ends -->
+
+
+
+    <section class="home" id="home">
+
+        <div class="slides-container">
+
+            <div class="slide active">
+                <div class="content">
+                    <span>Fresh, Natural, Organic</span>
+                   
+                    <br />
+                    <a href="#" class="btn">shop now</a>
+                </div>
+                <div class="image">
+                    <img src="https://t8e5h5n7.stackpathcdn.com/wp-content/uploads/2017/06/slider-1-min-1.jpg" alt="" >
+                </div>
+            </div>
+            
+            <div class="slide">
+                <div class="content">
+                    <span>Fresh Fruits & Vegetables</span>
+                   <br />
+                    <a href="#" class="btn">shop now</a>
+                </div>
+                <div class="image">
+                    <img src="https://www.bluemountainpeak.com/pub/media/homepage_slider/fruit-and-vegetable-banner.jpg" alt="" >
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <span>Fresh, Natural, Organic </span>
+                    <br />
+                    <a href="#" class="btn">shop now</a>
+                </div>
+                <div class="image">
+                    <img src="https://t8e5h5n7.stackpathcdn.com/wp-content/uploads/2017/06/slider-1-min-1.jpg" alt="" >
+                </div>
+            </div>
+
+        </div>
+
+        <div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
+        <div id="prev-slide" class="fas fa-angle-left" onclick="next()"></div>
+
+    </section>
+
+
+    <br><br>
+    <h1>Shopping List</h1>
+    <br>
+    <form action="add" method="get" >
+        <label>Add Item: </label>
+        <input type="text" name="item" style="width: 390px; border: 1px solid lightgray">
+        <br>
+        <input id="addNeed" type="submit" value="Need" style="width: 60px; border: 1px solid lightgray;" >
+        <input id="addHave" type="submit" value="Have" style="width: 60px; border: 1px solid lightgray;"> 
+    </form>
+    <br><br>
+    <h2> Need: </h2>
+    <ul class='list' >
+        <li><input type="checkbox" name="item"> Milk <a href="#">&#10006;</a></li>
+        <li><input type="checkbox" name="item"> Pineapple <a href="#">&#10006;</a></li>
+        <li><input type="checkbox" name="item"> Snacks <a href="#">&#10006;</a></li>
+        <li><input type="checkbox" name="item"> Oil <a href="#">&#10006;</a></li>
+    </ul>
+    <br><br><br>
+    <h2> Have: </h2>
+    <ul class='list'>
+        <li><input type="checkbox" name="item" checked> Steak <a href="#">&#10006;</a></li>
+        <li><input type="checkbox" name="item" checked> Cream <a href="#">&#10006;</a></li>
+        <li><input type="checkbox" name="item" checked> Cheese <a href="#">&#10006;</a></li>
+        <li><input type="checkbox" name="item" checked> Apples <a href="#">&#10006;</a></li>
+    </ul>
+<br><br>
+
+
+       <!-- footer section starts  -->
+     
+    <section class="footer">
+
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html"> <i class="fas fa-arrow-right"></i> home</a>
+                <a href="shop.html"> <i class="fas fa-arrow-right"></i> shop</a>
+           <!-- <a href="about.html"> <i class="fas fa-arrow-right"></i> about</a>
+                <a href="review.html"> <i class="fas fa-arrow-right"></i> review</a>
+                <a href="blog.html"> <i class="fas fa-arrow-right"></i> blog</a>
+                <a href="contact.html"> <i class="fas fa-arrow-right"></i> contact</a> -->
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i> my cart </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> my wishlist </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> terms or use </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+             <!--   <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a> -->
+            </div>
+
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <form action="">
+                    <input type="email" placeholder="enter your email">
+                    <input type="submit" value="Subscribe" class="btn">
+                </form>
+                <img src="C:\Users\ymane\OneDrive\Documents\TimesPro\ProjectImages\GroceryWebsite/payment.png" class="payment" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="credit">created by Punam Surwase | all rights reserved!</section>
+
+    <!-- footer section ends -->
+
+
+
+
+
+    <script src="JavaScript.js"></script>
+
+
+</body>
+</html>
